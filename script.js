@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleButton.textContent = "Pause Music";
             message.innerHTML = `
                 Music is now playing. Enjoy the melody! <br>
-                Blue Archive OST 21. Midnight Trip 
+                Blue Archive OST 46 Sugar Story 
                 <div class="music-animation">
                     <span></span><span></span><span></span>
                 </div>`;
@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
             music.pause();
             toggleButton.textContent = "Play Music";
             message.innerHTML = `Music is paused. Take a break! <br> 
-                <a href="(https://www.youtube.com/watch?v=KopFUu0F4gk&pp=ygUNbWlkbmlnaHQgdHJpcA%3D%3D)" target="_blank" style="color: blue; text-decoration: underline;">
-                    [Original Blue Archive OST 21. Midnight Trip YouTube Video]
+                <a href="(https://www.youtube.com/watch?v=CuifrehnDBY&pp=ygUYc3VnYXIgc3RvcnkgYmx1ZSBhcmNoaXZl)" target="_blank" style="color: blue; text-decoration: underline;">
+                    [Original Blue Archive OST 46 Sugar Story YouTube Video]
                 </a>`;
         }
     }
