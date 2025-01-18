@@ -1,0 +1,358 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: cyan;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; /* Stack items vertically */
+    min-height: 100vh;
+    font-size: 16px;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 120px; /* Adjusted to avoid overlap with fixed top content */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Heading styling */
+h2 {
+    font-size: 36px;
+    color: blue;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 18px;
+    color: darkblue;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.paragraph-1 {
+    font-size: 20px;
+    color: aqua;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.paragraph-2 {
+    font-size: 18px;
+    color: skyblue;
+    font-style: italic;
+}
+
+/* Button styling */
+.button {
+    background-color: navy;
+    color: cyan;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto; /* Centers button */
+}
+
+.button:hover {
+    background-color: cyan;
+    color: navy;
+}
+
+/* Image Styling */
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Time and Calendar Container */
+#time-calendar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center; /* Center text */
+    margin: 0;
+}
+
+/* Time and Calendar Styling */
+#time, #calendar {
+    font-size: 1.2rem; /* Increase font size slightly */
+    color: cyan;
+    background-color: blue;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 5px;
+    width: 80%; /* Adjust width for mobile */
+    max-width: 300px; /* Ensure they don't exceed screen width */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Adjust container and text sizes for smaller screens */
+    .container {
+        margin-top: 120px; /* Avoid overlap with fixed content */
+        width: 100%; /* Allow container to take up full width */
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    #time, #calendar {
+        font-size: 1.1rem; /* Slightly smaller font size for mobile */
+        width: 90%; /* Allow the time and calendar to adjust to screen */
+        max-width: 90%; /* Keep it from getting too wide */
+    }
+
+    /* Adjust top margin for fixed header */
+    #time-calendar-container {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .img-responsive img {
+        max-width: 200px; /* Adjust max-width for mobile */
+    }
+}
+
+/* Larger Screens (Desktop & Tablets) */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px; /* Set default font size for desktop */
+    }
+
+    .container {
+        margin-top: 120px; /* Space for the fixed top bar */
+        padding: 40px; /* More padding on larger screens */
+        width: 60%; /* Ensure container doesn't stretch too wide */
+    }
+
+    h2 {
+        font-size: 40px; /* Larger heading for desktop */
+    }
+
+    .button {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+
+    /* Adjust size of clock and calendar on larger screens */
+    #time, #calendar {
+        font-size: 1.5rem; /* Larger font size for desktop */
+        width: 40%; /* Make them narrower */
+        max-width: 400px; /* Prevent stretching */
+    }
+
+    /* Image responsiveness */
+    .img-responsive img {
+        max-width: 300px; /* Larger max-width for desktop */
+    }
+}
+
+/* Ensure the layout is also good on extra large screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 50%; /* Reduce width on extra large screens */
+    }
+
+    h2 {
+        font-size: 48px; /* Even larger heading */
+    }
+}
+
+/* Container to hold the image and description */
+.image-container {
+    position: relative;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Set max width for the image */
+    margin: 0 auto; /* Center container */
+}
+
+/* Style for the image */
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.img-responsive.image-container {
+    max-width: 100%; /* Ensures responsiveness */
+    margin: auto; /* Centers the container */
+    text-align: center; /* Centers the text below the image */
+}
+
+.img-responsive .image {
+    max-width: 100%; /* Ensures the image scales with the container */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Prevents inline spacing issues */
+    margin: 0 auto; /* Centers the image */
+}
+
+.img-responsive .text {
+    font-size: 1.2em; /* Adjust font size */
+    color: white; /* Text color for contrast */
+    opacity: 0; /* Hides the text initially */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+    padding: 10px; /* Adds padding around the text for better spacing */
+    margin-top: 10px; /* Space between the image and text */
+    border-radius: 5px; /* Optional: Rounded corners */
+    display: inline-block; /* Makes the background fit tightly around the text */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.img-responsive.image-container:hover .text {
+    opacity: 1; /* Shows the text on hover */
+}
+
+/* Music Player Container */
+#music-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 300px;
+    background-color: lightgray;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Styling the Audio Element */
+#bg-music {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Styling the Play/Pause Button */
+#music-toggle-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover Effect for the Button */
+#music-toggle-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Button Active State */
+#music-toggle-btn:active {
+    background-color: #004080;
+    transform: scale(0.95);
+}
+
+/* Styling for the Message */
+#message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+/* Style the progress bar */
+#progress-bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #ddd; /* Background of the progress bar */
+    appearance: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Style the progress bar's color (left side) */
+#progress-bar::-webkit-progress-value {
+    background-color: cyan; /* Color for the left side */
+    border-radius: 5px;
+}
+
+/* Mozilla Firefox */
+#progress-bar::-moz-progress-bar {
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+/* Animation for music player */
+.music-animation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.music-animation span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+.music-animation span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.music-animation span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
